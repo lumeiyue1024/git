@@ -2,90 +2,123 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
-		<title>格莱商城</title>
+		<!--移动端的视图窗口：页面大小等于窗口大小 不能缩放-->
+		<meta name="viewport" 
+			content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		
+		<title>格莱商城</title>
 	</head>
 	<body>
 		<!--头部-->
-			<header>
-				<div class="icon-logo logo"><a href="index.html"><span>格莱商城</span></a></div>
-				<div class="search">
-					<form method="post">
-						<input type="search" name="" placeholder="">
-					</form>
-				</div>
-				<div class="icon-login login"><a href="login.html"><span>用户登录</span></a></div>
-			</header>
-		<div class="container">
-			<!--banner-->
-			<div class="carousel">
-				<div class="banner-box">
-					<img src="img/banner.png"/>
-					<img src="img/banner2.png"/>
-					<img src="img/banner3.png"/>
-				</div>
+		<header>
+			<!--logo网站优化-->
+			<div class="logo">
+				<a class="icon" href="index.html">
+					格莱商城
+				</a>
 			</div>
-			<!--导航栏-->
+			<!--search-->
+			<div class="search">
+				<em class="icon"></em>
+				<input type="search" />
+			</div>
+			<!--login-->
+			<div class="login">
+				<a class="icon" href="my.html">
+					登录
+				</a>
+			</div>
+		</header>
+		<!--头部结束-->
+		<!--中间-->
+		<div class="container">
+			<!--轮播图-->
+			<div class="carousel">
+				<ul class="banner ">
+					<li><a href="#"><img src="img/banner.png"/></a></li>
+					<li><a href="#"><img src="img/banner2.png"/></a></li>
+					<li><a href="#"><img src="img/banner3.png"/></a></li>
+				</ul>
+			</div>
+			<!--导航-->
 			<nav>
 				<ul>
-					<li class="icon-index"><a href="goods.html">热门</a></li>
-					<li class="icon-boutique"><a href="#">精品</a></li>
-					<li class="icon-special"><a href="#">专题</a></li>
-					<li class="icon-brand"><a href="#">品牌</a></li>
+					<li class="icon"><a href="goods.html">热门</a></li>
+					<li class="icon"><a href="#">精品</a></li>
+					<li class="icon"><a href="#">专题</a></li>
+					<li class="icon"><a href="#">品牌</a></li>
 				</ul>
 			</nav>
-			<!--正文-->
-			<main>
-				<!--书籍资料-->
-				<div class="products">
-					<div class="hd">
-						<em class="icon-book">书籍资料</em>
-						<span><a href="goods.html">更多 ></a></span>
+			<!--产品-->
+			<div class="products">
+				<div class="hd clearfix">
+					<div class="left">
+						<a class="icon" href="#"></a>
+						书籍资料
 					</div>
-					<div class="book-list">
-						<div class="left-list">
-							<a href="detail.html"><img src="img/bz01.png"/></a>
-							<span class="book">
-								<a href="#"><img src="img/book1.png"/></a>
-								<a href="#"><img src="img/book1.png"/></a>
-							</span>
+					<a href="#">更多 &gt;</a>
+				</div>
+				<div class="book">
+					<div class="book_left">
+						<div class="top">
+							<a href="detail.html"><img src="img/bz01.png" /></a>
 						</div>
-						<div class="right-list">
-							<a href="#"><img src="img/books.png"/></a>
+						<div class="bottom">
+							<img src="img/book1.png" />
+							<img src="img/book1.png" />
+						</div>
+					</div>
+					<div class="book_right">
+							<img src="img/books.png" />
+						
+					</div>
+				</div>
+			</div>
+			
+			<!--2-->
+				<div class="products">
+				<div class="hd clearfix">
+					<div class="left">
+						<a class="icon" href="#"></a>
+						数码产品
+					</div>
+					<a href="#">更多 &gt;</a>
+				</div>
+				<div class="book">
+				
+					<div class="book_right">
+							<img src="img/pc.png" />
+						
+					</div>
+						<div class="book_left">
+						<div class="top2">
+							<img src="img/usb.png" />
+						</div>
+						<div class="bottom2">
+							
+							<img src="img/card.png" />
 						</div>
 					</div>
 				</div>
-				<!--数码产品-->
-				<div class="products">
-					<div class="hd">
-						<em class="icon-digital">数码产品</em>
-						<span><a href="goods.html">更多 ></a></span>
-					</div>
-					<div class="digital-list">
-						<div class="left-list">
-							<a href="#"><img src="img/pc.png"/></a>
-						</div>
-						<div class="right-list">
-								<a href="#"><img src="img/usb.png"/></a>
-								<a href="#"><img src="img/card.png"/></a>
-						</div>
-					</div>
-				</div>
-				<p>---- 我是有底线的 ----</p>
-			</main>
+			</div>
+			<p>-----我是有底线的------ </p>
 		</div>
+		<!--中间结束-->
 		<!--底部-->
-			<footer>
-				<ul>
-					<li class="icon-home-active"><a href="#">首页</a></li>
-					<li class="icon-category"><a href="category.html">分类</a></li>
-					<li class="icon-cart"><a href="cart.html">购物车</a></li>
-					<li class="icon-my"><a href="my.html">我的</a></li>
+		<footer>
+			<ul>
+					<li class="icon"><a href="index.html">首页</a></li>
+					<li class="icon"><a href="category.html">分类</a></li>
+					<li class="icon"><a href="cart.html">购物车</a></li>
+					<li class="icon"><a href="my.html">我的</a></li>
 				</ul>
-			</footer>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/galaxy.js"></script>
+		</footer>
+		
+		<!--底部结束-->
+		
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	     <script src="js/index.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

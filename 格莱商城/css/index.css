@@ -1,259 +1,245 @@
-.container{
-	max-width: 750px;
-	min-width: 32px;
-	margin: 0 auto;
-	padding: 60px 0 70px 0;
-}
-[class^="icon"]{
-	display:inline-block;
+/*统一设置所以背景图片*/
+.icon{
 	background: url(../img/icon.png) no-repeat;
-	background-size: 375px auto;
+	/*2倍背景图 兼容苹果的浏览器*/
+	-webkit-background-size: 375px auto;
+	background-size:375px auto ;
 }
+
 header{
 	height: 60px;
-	background-color: #39435b;
-	padding: 15px 0;
+	max-width:750px ;
+	max-height: 320px;
+	background-color: #39435B;
+	/*display：inline-block*/
 	position: fixed;
 	width: 100%;
-	max-width: 750px;
 	top: 0;
+	/*加了定位和浮动margin: 0  auto; 失效了*/
+	/*解决方法*/
+	margin: 0  auto;
 	left: 0;
 	right: 0;
-	margin: auto;
-	z-index: 10;
-	box-shadow: 0 1px 1px rgba(83,83,83,0.5);
+	padding: 12px 10px 0;
 }
-.logo{
+/*logo*/
+header .logo{
+	float: left;
 	width: 120px;
 	height: 35px;
-	float: left;
-	margin-left: 10px;
+	
 }
-header a{
+header .logo a{
 	display: block;
 	height: 100%;
+	font-size: 0;
+
 }
-header span{
-	display: none;
-}
-.search{
-	margin-top: 3px;
-	width:calc(100% - 177px );
+/*search*/
+header .search{
 	float: left;
+	/*css计算器:通过计算器添加search*/
+	width: calc(100% - 165px);
+	margin-right: 10px;	
+	position: relative ;
+	/*下边注释*/
+}
+/*通过定位在搜索框中 添加 图标 ：注意 搜索框足够的左填充*/
+
+header .search em{
+	/*绝对以后设置父标签相对定位，相对于父标签条调整位置*/
 	position: absolute;
-	left: 130px;
-}
-.search input{
-	padding: 7px 10px;
-	padding-left: 30px;
-	width: 100%;
-	border-radius: 25px;
-	background-color: #e1e5ee;
-}
-.search:before{
-	content: '';
+	top: 0;
+	left: 5px;
 	width: 35px;
 	height: 35px;
-	position: absolute;
-	background-color: #fff;
-	left: 0;
-	background: url(../img/icon.png) no-repeat;
-	background-size: 375px auto;
-	background-position: -125px -2px;
+	background-position: -120px 0;
 }
-.login{
+header .search input{
+	width: 100%;
+	height: 35px;
+	border-radius: 20px;
+	padding: 5px 10px  5px 50px;
+}
+/*login*/
+header .login{
 	float: right;
-	margin-right: 5px;
-	width: 32px;
-	height: 32px;
-	background-position: -340px 0px;
+	width: 35px;
+	height: 35px;
 }
-/* 轮播图 */
-.carousel{
+header .login a{
+	display: block;
 	width: 100%;
-	position: relative;
-	overflow:hidden;
+	height: 100%;
+	font-size: 0;
+	background-position: -340px 0;
 }
-.banner-box{
-	position: relative;
+
+/*内容容器*/
+.container{
 	width: 100%;
-	-webkit-animation: autoPlay 10s ease-out infinite alternate;
-}
-.banner-box img{
-	float: left;
 	max-width: 750px;
-	min-width: 320p;
+	min-width: 320px;
+	margin: 0 auto;
+	/*height: 100px;
+	background-color: palegoldenrod;*/
+	/**/
+	margin: 60px auto 80px;
 }
-@-webkit-keyframes autoPlay{
-	0%,30%{
-		margin-left: 0;
-	}
-	35%,65%{
-		margin-left: -100%;
-	}
-	70%,100%{
-		margin-left: -200%;
-	}
+/*轮播图*/
+.carousel{
+	width:100%;
+	overflow: hidden;
 }
+.carousel ul{
+	width: 300%;
+	/*这仅仅是为了让left属性生效*/
+	position: relative;
+	/*调用动画*/
+	animation: slide 10s infinite alternate; /*动画名称时间循环*/
+}
+.carousel ul li{
+	width: calc(100% / 3);
+	float: left;
+}
+/*定义动画*/
+@keyframes slide{
+	0%,5%{left: 0;}
+	40%,50%{left: -100%;}
+	90%,100%{left: -200%;}
+}
+/*导航*/
 nav{
-	background: #fff;
-	text-align: center;
-	padding: 5px 0;
+	background-color: #fff;
 }
-nav li{
-	width: 46px;
-	text-align: center;
-	margin: 0 4.8%;
+nav ul{
+	padding: 0 10%;
+	/*父标签开启弹性布局*/
+	display: flex;
+	/*子标签超出是否换行*/
+	/*flex-wrap: ;*/
+	/*子标签没排满，怎么分配剩余空间---子标签的对齐方式*/
+	justify-content: space-around;
 }
-nav li a{
+
+nav ul li{
+	width: 45px;
+}
+nav ul li:nth-child(1){
+	background-position: -25px -115px;
+}
+nav ul li:nth-child(2){
+	background-position: -117px -115px;
+}
+nav ul li:nth-child(3){
+	background-position: -208px -115px;
+}
+nav ul li:nth-child(4){
+	background-position: -300px -115px;
+}
+nav ul li a{
+	text-align: center;
+	display: block;
+	padding-top:50px ;
+}
+/*产品一*/
+.products{
+	margin: 10px 0;
+	background-color: #fff;
+	padding: 10px;
+}
+.products .hd{
+	border-bottom: 1px #E1E5EE solid;
+}
+.products .hd .left{
+    float: left;	
+}
+/*右边的a*/
+.products .hd>a{
+	float: right;
+	color: #FFA500;
+}
+/*左边里边的a*/
+.products .hd .left a{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background-position: 0 -42px;
+}
+/*产品内容书籍*/
+.book{
+	display: flex;
+}
+.book .book_left{
+	flex: 1.6;	
+	
+}
+.book .book_right{
+	flex: 1.3;	
+	padding: 30px 10px 0;
+	border: 1px solid #E1E5EE;
+}
+.book .book_left .top{
+	border-bottom: 1px solid #E1E5EE;
+	
+}
+.book .book_left .top img{
+	padding: 20px 10px;
+	
+}
+.book .book_left .bottom img{
+	width: 45%;
+	margin: 1%;
+	
+}
+.book .book_left .top2 img{
+	width: 50%;
+margin-top: 10px;
+	
+}
+.book .book_left .bottom2 img{
+	width: 50%;
+	margin: 1%;
+	
+}
+p{
+	text-align: center;
+	color: #666666;
+}
+/*底部*/
+footer{
+	max-width: 750px;
+	min-width: 320px;
+	background-color: #39435B;
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+}
+footer ul{
+	display: flex;
+	justify-content:space-around;
+	
+}
+footer ul li{
+	width: 45px;
+}
+footer ul li a{
+	text-align: center;
+	color: #fff;
 	display: block;
 	padding-top: 50px;
 }
-.icon-index{
-	background-position:-25px -115px;
+footer ul li:nth-child(1){
+	background-position: -16px -245px;
 }
-.icon-boutique{
-	background-position:-117px -115px;
+footer ul li:nth-child(2){
+	background-position: -119px -185px;
 }
-.icon-special{
-	background-position:-208px -115px;
+footer ul li:nth-child(3){
+	background-position: -224px -185px;
 }
-.icon-brand{
-	background-position:-300px -115px;
-}
-.products{
-	margin-top: 10px;
-	background-color: #fff;
-}
-main .hd{
-	padding:0 10px;
-	border-bottom: 1px solid #E1E5EE;
-	line-height: 35px;
-}
-main em{
-	padding-left:20px;
-	font-weight: bold;
-}
-main span a{
-	font-size: 12px;
-	float: right;
-	color: #f90;
-}
-main p:last-child{
-	padding-top:10px ;
-	text-align: center;
-	color: #b4bac6;
-}
-.icon-book{
-	background-position:0 -42px;
-}
-.book-list,.digital-list{
-	display: -webkit-flex;
-}
-.book-list .left-list{
-	-webkit-flex: 1.6;
-	padding: 10px 0;
-}
-.book-list .right-list{
-	-webkit-flex: 1.4;
-	padding: 20px 10px;
-	border-left: 1px solid #E1E5EE;
-	padding-top: 40px;
-}
-.book-list .left-list > a > img{
-	padding: 10px;
-}
-.book{
-	display: -webkit-flex;
-	border-top: 1px solid #E1E5EE;
-	padding:10px 0 0 10px;
-}
-.book img{
-	width: 94%;
-}
-.book a:first-child{
-	-webkit-flex: 1;
-}
-.book a:last-child{
-	-webkit-flex: 1;
-}
-.icon-digital{
-	background-position:0 -82px;
-}
-.digital-list .left-list{
-	-webkit-flex: 1;
-	padding: 10px 5px;
-	border-right: 1px solid #E1E5EE;
-	padding-top: 35px;
-}
-.digital-list .right-list{
-	-webkit-flex: 1;
-	
-	text-align: center;
-}
-.digital-list .right-list img{
-	width: 50%;
-	margin-top: 10px;
-}
-.digital-list .right-list a:last-child {
-	display: block;
-	margin-top: 10px;
-	border-top: 1px solid #E1E5EE;
-}
-footer{
-	width: 100%;
-	max-width: 750px;
-	height: 55px;
-	text-align: center;
-	background-color: #39435B;
-	position: fixed;
-	bottom: -1px;
-	left: 0;
-	right: 0;
-	margin: auto;
-	padding: 5px 0;
-	box-shadow: 0 -1px 1px rgba(128,128,128,0.5);
-}
-footer li{
-	width: 46px;
-	text-align: center;
-	
-	margin: 0 4.8%;
-}
-footer li a{
-	display: block;
-	color:#E1E5EE;
-	padding-top: 30px;
-	width: 100%;
-	height: 100%;
-}
-.icon-home{
-	background-position:-16px -198px;
-}
-.icon-category{
-	background-position:-119px -198px;
-}
-.icon-cart{
-	background-position:-224px -198px;
-}
-.icon-my{
-	background-position:-327px -198px;
-}
-footer li a:focus,footer li a:hover{
-	color: #5bb2ff;
-}
-.icon-home-active{
-	background-position:-16px -258px;
-}
-.icon-category-active{
-	background-position:-119px -258px;
-}
-.icon-cart-active{
-	background-position:-224px -258px;
-}
-.icon-my-active{
-	background-position:-327px -258px;
-}
-footer li:first-child a{
-	color: #5BB2FF;
+footer ul li:nth-child(4){
+	background-position: -327px -185px;
 }

@@ -1,0 +1,209 @@
+/*统一设置所以背景图片*/
+.icon{
+	display: inline-block;
+	background: url(../img/icon.png) no-repeat;
+	/*2倍背景图 兼容苹果的浏览器*/
+	-webkit-background-size: 375px auto;
+	background-size:375px auto ;
+}
+
+
+/*开始*/
+.container{
+	max-width: 750px;
+	min-width: 32px;
+	margin: 0 auto;
+	padding-bottom: 55px;
+}
+/*头部*/
+header{
+	height: 100px;
+	background-color: #39435B;
+
+}
+.via {
+	background-position: 0 -330px;
+    margin: 10px 0 0 10px;
+    float: left;
+    }
+.via a{
+	width: 75px;
+    height: 75px;
+    display: inline-block;
+    } 
+.userName{
+	line-height: 75px;
+	padding-left: 15px;
+	float: left;
+}
+.userName em{
+	color: #FFFFFF;
+	font-size: 16px;
+	font-weight: bold;
+}
+.manage{
+	float: right;
+    line-height: 75px;
+    margin-top: 40px;
+}
+.manage a{
+	color: #FFFFFF;
+}
+/*中间*/
+main div{
+	background-color:#FFFFFF;
+}
+.myInfo{
+	padding: 0 10px;
+	line-height: 40px;
+	border-bottom: 1px solid #B4BAC6;
+	
+	/*background: floralwhite;*/
+}
+.myInfo em{
+	  padding-left: 23px;
+	  background-position: -357px -77px;
+}
+.myInfo a{
+	float: right;
+	margin-right: -135px;
+}
+.module{
+	padding: 5px 0;
+	border-bottom: 1px solid #B4BAC6;
+}
+.module ul{
+	margin: 0 auto;
+	text-align: center;	
+}
+.module li{
+	text-align: center;
+	width:50px;
+	display: inline-block;
+	padding-top: 40px;
+	margin: 0 4%;
+}
+.module ul li:nth-child(1){
+	background-position: -112px -333px;
+}
+.module ul li:nth-child(2){
+	background-position: -173px -333px;
+}
+.module ul li:nth-child(3){
+	background-position: -225px -333px;
+}
+.module ul li:nth-child(4){
+	background-position: -285px -333px;
+}
+/*二*/
+.module2{
+	padding: 5px 0;
+	border-bottom: 1px solid #B4BAC6;
+	margin-top: 10px;
+}
+.module2 ul{
+	text-align: center;	
+	margin: 0 auto;
+}
+.module2 li{
+	margin: 0 2.5%;
+	padding-top: 40px;
+	text-align: center;
+	width:60px;
+	display: inline-block;
+}
+.module2 li span {
+    display: block;
+    color: #C30000;
+}
+.module2 ul li:nth-child(1){
+	background-position: -110px -382px;
+}
+.module2 ul li:nth-child(2){
+	background-position: -170px -382px;
+}
+.module2 ul li:nth-child(3){
+	background-position: -221px -382px;
+}
+.module2 ul li:nth-child(4){
+	background-position: -280px -382px;
+}
+
+/*最后俩*/
+.myInfo1{
+	margin-top: 10px;
+	padding: 0 10px;
+	line-height: 40px;
+	border-bottom: 1px solid #B4BAC6;
+
+	
+	/*background: floralwhite;*/
+}
+.myInfo1 em{
+	  padding-left: 23px;
+	  
+	  	background-position: -357px -297px;
+}
+.myInfo1 a{
+	float: right;
+	margin-right: 1px;
+	
+}
+/*意见*/
+.myInfo2{
+	padding: 0 10px;
+	line-height: 40px;
+	border-bottom: 1px solid #B4BAC6;
+
+	
+	/*background: floralwhite;*/
+}
+.myInfo2 em{
+	  padding-left: 23px;
+	  
+	  	background-position: -357px -419px;
+}
+.myInfo2 a{
+	float: right;
+	margin-right: 1px;
+	
+}
+/*底部*/
+footer{
+	max-width: 750px;
+	min-width: 320px;
+	background-color: #39435B;
+	position: fixed;
+	bottom: 0;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	padding: 5px 0;
+}
+footer ul{
+	display: flex;
+	justify-content:space-around;
+	
+}
+footer ul li{
+	width: 45px;
+	margin: 0 3%;
+}
+footer ul li a{
+	text-align: center;
+	color: #fff;
+	display: block;
+	padding-top: 50px;
+}
+footer ul li:nth-child(1){
+	background-position: -16px -185px;
+}
+footer ul li:nth-child(2){
+	background-position: -119px -185px;
+}
+footer ul li:nth-child(3){
+	background-position: -224px -185px;
+}
+footer ul li:nth-child(4){
+	background-position: -327px -241px;
+}
